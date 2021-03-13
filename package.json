@@ -6,23 +6,40 @@
     "dev": "next dev",
     "test": "jest",
     "test:watch": "jest --watchAll",
+    "test:coverage": "jest --coverage",
+    "test:unit": "jest --config=jest-unit.config.js",
+    "test:unit:watch": "jest --config=jest-unit.config.js --watchAll",
+    "test:integration": "jest --config=jest-integration.config.js",
+    "test:integration:watch": "jest --config=jest-integration.config.js --watchAll",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
     "@tailwindcss/ui": "^0.6.2",
-    "next": "10.0.0",
+    "axios": "^0.21.1",
+    "immer": "^8.0.1",
+    "next": "10.0.8",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "tailwindcss": "^1.7.4"
+    "tailwindcss": "^1.7.4",
+    "zustand": "^3.3.3"
   },
   "devDependencies": {
-    "@testing-library/dom": "^7.26.5",
-    "@testing-library/jest-dom": "^5.11.5",
-    "@testing-library/react": "^11.1.1",
+    "@testing-library/dom": "^7.29.6",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@testing-library/react-hooks": "^5.1.0",
+    "@testing-library/user-event": "^12.8.1",
+    "@types/jest": "^26.0.20",
     "babel-jest": "^26.6.3",
+    "jest": "^26.6.3",
     "jest-dom": "^4.0.0",
+    "msw": "^0.27.0",
     "postcss-flexbugs-fixes": "4.2.1",
-    "postcss-preset-env": "^6.7.0"
+    "postcss-preset-env": "^6.7.0",
+    "react-test-renderer": "^17.0.1"
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }
